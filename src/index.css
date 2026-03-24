@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-background: #131313;
+  --color-surface: #1b1b1b;
+  --color-primary: #ff562c;
+  --color-primary-muted: #891d01;
+  --color-text-main: #e2e2e2;
+  --color-text-muted: #e8bdb3;
+  --color-outline: rgba(232, 189, 179, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-main font-sans selection:bg-primary selection:text-white;
+  }
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(255, 86, 44, 0.4);
+}
+
+.notch-top-right {
+  clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%);
+}
